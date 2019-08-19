@@ -1,0 +1,103 @@
+---
+title: "ComputationalReproducibility1"
+author: "Fred LaPolla"
+date: "August 19, 2019"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R for Analysis
+
+
+
+R is a tool for cleaning, analyzing and publishing data. 
+
+
+## R for Analysis
+
+
+
+Analyzing your data in R lets you:
+
+-Leave your raw data unchanged
+-Document analysis steps with your code
+-Automate analysis and save it for later
+-Share with other R users 
+-Explicitly say what files you are using for analysis and displaying your order of operations
+-Maintain a history and version file
+-Publish your code
+
+
+## R Scripts
+
+
+
+A script is essentially a set of instructions (code) that tells the computer what to do. 
+
+```{r echo=TRUE, eval=FALSE}
+1:10
+mean(1:10)
+```
+
+## R Scripts
+
+
+
+A script is essentially a set of instructions (code) that tells the computer what to do. 
+
+```{r echo=TRUE, eval=TRUE}
+1:10
+mean(1:10)
+```
+
+## R Scripts
+
+
+Let you save your code for later. This is nice because you do not have to remember what you did or write down instructions for later. Instead you can open the same file and re-run analyses. This is particularly nice if you are running the same analysis on different variables or different data. 
+
+## R Scripts vs. Console
+
+The console is at the bottom of the screen in R. You can enter commands into this area directly and quickly, but it is not great for saving. Scripts are good for saving, but less ideal for trying things out on the fly. 
+
+![RStudio](RStudio.png)
+
+
+## R Projects
+
+An R Project is a feature of RStudio that lets you store your analysis script, a history file, versioning files and any data files that you analyze in R in one folder. 
+
+## R Projects
+
+An R Project can make your life easier by storing all your files in one project together. 
+
+## R Projects
+
+An R Project can make reproducibility easier by letting you directly code directions for accessing needed files (such as tables of data), making it easier to automate. 
+
+## R Projects
+
+On your own, create a new R Project in a new directory. A directory is just a file folder. I recommend doing this in a file folder on your computer rather than in Google Drive, as sometimes working in Drive will give you repeated annoying warnings about access. Save this somewhere that will make sense for you and name it something that will make sense later, like compReproClass.  
+
+
+## R Projects
+
+![Screen Grab of Folder](H:/SacklerResearchClass/CompRepro/screenGrap.png)
+
+## R Projects
+
+It will make life easier to keep the raw data files that you analyze in this same folder. 
+
+# R syntax
+
+##Pulling in Data (Putting the Cart Before the Horse)
+
+##Running Commands
+
+##Naming Variables
+
+
+
+## R Indexing
