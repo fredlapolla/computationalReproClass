@@ -13,6 +13,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 R is a tool for cleaning, analyzing and publishing data. 
 
+Now I'm making a change
+
+```{r}
+mean(2:20)
+```
+
+
+
 ***
 
 ## R for Analysis
