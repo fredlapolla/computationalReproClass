@@ -1,0 +1,417 @@
+---
+title: "Computational Reproducibility 1"
+author: "Fred LaPolla"
+date: "October 27, 2021"
+output:
+  slidy_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+R is a tool for cleaning, analyzing and publishing data. 
+
+***
+
+## R for Analysis
+
+
+</br>
+</br>
+</br>
+
+Analyzing your data in R lets you:
+
+-Leave your raw data unchanged
+
+-Document analysis steps with your code
+
+-Automate analysis and save it for later
+
+-Share with other R users 
+
+-Explicitly say what files you are using for analysis and displaying your order of operations
+
+-Maintain a history and version file
+
+-Publish your code
+
+***
+
+## Problem Solving
+
+
+There are too many commands in R to memorize them, also there is no need to do this and literally no one memorizes all the commands they use. 
+
+
+R is case sensitive!
+
+
+Look for **typos!**
+
+This can mean extra commas, periods, and parentheses that don't close. Sometimes the error message will clue you in, other times (most times?) not. 
+
+
+If the console gives a plus sign after running a command, hit **ESC.**
+
+***
+
+## Problem Solving
+
+
+When in doubt, Google it. 
+
+
+Literally no one memorizes more than a handful of commands, and most of the time you will need to look up the specific syntax. 
+
+My two favorite sites:
+
+
+-Stack Overflow: a site where people pose questions and others try to answer them. https://stackoverflow.com/questions/
+
+-Quick-R by DataCamp: Descriptions of how to do the regular things you may attempt in R. https://www.statmethods.net/stats/frequencies.html 
+
+***
+
+
+## R Scripts
+
+</br>
+</br>
+</br>
+A script is essentially a set of instructions (code) that tells the computer what to do. 
+
+```{r echo=TRUE}
+1:10
+mean(1:10)
+```
+
+
+***
+
+
+## R Scripts
+
+
+</br>
+</br>
+</br>
+Let you save your code for later. This is nice because you do not have to remember what you did or write down instructions for later. Instead you can open the same file and re-run analyses. This is particularly useful if you are running the same analysis on different variables or different data. 
+***
+
+
+
+## R Scripts vs. Console
+
+</br>
+</br>
+</br>
+The console is at the bottom of the screen in R. You can enter commands into this area directly and quickly, but it is not great for saving. Scripts are good for saving, but less ideal for trying things out on the fly. 
+
+***
+
+
+
+
+## R Projects
+
+</br>
+</br>
+</br>
+
+An R Project is a feature of RStudio that lets you store your analysis script, a history file, versioning files and any data files that you analyze in R in one folder. 
+
+***
+
+
+## R Projects
+
+
+</br>
+</br>
+</br>
+An R Project can make your life easier by storing all your files in one project together. 
+
+***
+
+
+## R Projects
+
+</br>
+</br>
+</br>
+
+An R Project can make reproducibility easier by letting you directly code directions for accessing needed files (such as spreadsheets or tables of data), making it easier to automate. 
+
+***
+
+
+## R Projects
+
+</br>
+</br>
+</br>
+
+On your own, create a new R Project in a new directory. A directory is just a file folder. I recommend doing this in a file folder on your computer rather than in Google Drive, as sometimes working in Drive will give you repeated annoying warnings about access. Save this somewhere that will make sense for you and name it something that will make sense later, like compReproClass.  
+
+
+
+***
+
+
+## R Projects
+</br>
+</br>
+</br>
+
+
+It will make life easier to keep the raw data files that you analyze in this same folder because then the project can access data without having to give too many instructions. 
+
+***
+
+
+
+## R Projects and GitHub
+</br>
+</br>
+</br>
+Version control is essentially the same as "track changes" in Word: a way to see what changes were made each time you update a file.
+
+***
+
+
+## R Projects and GitHub
+</br>
+</br>
+</br>
+Git is a system for tracking these changes. You can work with it directly in the command line. If you are interested in this, you can try:
+
+*https://www.codecademy.com/learn/learn-the-command-line
+*https://www.datacamp.com/courses/introduction-to-git-for-data-science
+
+
+***
+
+
+## R Projects and GitHub
+</br>
+</br>
+</br>
+Github is a website where people can store and share code, and track version changes. 
+
+***
+
+
+## R Projects and GitHub
+</br>
+</br>
+</br>
+Individuals can "fork" from an existing repository, make changes, save and commit them and then post the new version online. 
+
+***
+
+
+## R Projects and GitHub
+
+</br>
+</br>
+</br>
+
+You  can link your project to a GitHub repository by setting up a new project and selecting Version Control. 
+
+***
+
+
+## R Projects and GitHub
+
+</br>
+</br>
+</br>
+
+You can then provide the URL of a GitHub page. This lets you store a project online, update it and track changes. You can also work with others projects this way as well. To save your new versions you must save locally and then commit the changes. 
+
+For demo purposes: https://github.com/fredlapolla/computationalReproClass
+
+***
+
+
+
+## R Syntax Running Commands
+
+</br>
+</br>
+</br>
+
+Commands are instructions to R to do something.
+
+
+***
+
+
+## Running Commands
+
+</br>
+</br>
+</br>
+
+```{r echo = TRUE, eval=FALSE}
+mean(1:10)
+```
+
+***
+
+
+## Running Commands
+
+</br>
+</br>
+</br>
+
+```{r echo = TRUE, eval = TRUE}
+mean(1:10)
+```
+
+
+***
+
+
+## Naming Variables, Lists, Dataframes and Functions
+
+</br>
+</br>
+</br>
+
+Sometimes you want to refer to a set of data (like the above list of 1 through 10). You can assign a Variable which names some value in R. 
+
+***
+
+
+## Naming Variables, Lists, Dataframes and Functions
+
+
+```{r echo=TRUE}
+OneToTen <- (1:10)
+mean(OneToTen)
+
+```
+
+***
+
+
+## On Your Own:
+
+</br>
+</br>
+</br>
+
+Create a variable for a list of numbers 10 through 20, and find the median value. 
+
+
+***
+
+
+
+##Pulling in Data
+
+
+</br>
+</br>
+</br>
+
+One of the first things you will need to do when using R is pull in data, typically from something like a CSV file (a low-tech Excel file)
+
+***
+
+## Pulling in Data
+
+</br>
+</br>
+</br>
+
+Using R to analyze data stored in a separate raw file lets you keep your original data unchanged, helping to improve reproducibility.
+
+***
+
+## Pulling in Data
+
+</br>
+</br>
+</br>
+
+```{r echo = TRUE}
+
+crusio1 <- read.csv("https://raw.githubusercontent.com/fredlapolla/computationalReproClass/master/Crusio1.csv")
+```
+
+***
+
+## Pulling in Data
+
+</br>
+</br>
+</br>
+
+There are other types of data, and you can look up how to add them as data to your R analyses.
+
+***
+
+## Pulling in Data
+
+
+There are other types of data, and you can look up how to add them as data to your R analyses.
+
+***
+
+## Looking at your data
+
+
+There are a few ways to get a sense of your data
+
+***
+
+## Looking at your data
+
+
+
+View(crusio1)
+
+
+
+
+```{r echo = TRUE}
+summary(crusio1)
+```
+
+***
+
+## Looking at your data
+
+
+On your own, use summary and find the median and mean bodwyweight (bw) levels`
+
+***
+
+## R Indexing
+
+
+Indexing is a way of accessing specific parts of a dataframe.
+
+***
+
+## R Indexing
+
+
+Two main approaches:
+
+- The name of the dataframe with a dollarsign followed by a variable: crusio1$bw
+
+- The name of the dataframe with [rows, columns] written in square brackets: crusio1[4,5]
+
+
+
+
+
+
+
